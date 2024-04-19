@@ -1,0 +1,443 @@
+*{
+    margin: 0%;
+    cursor: none;
+    
+}
+html{
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.stars, .moon{
+    background-image: url(PFstars.png);
+    background-size: contain;
+}
+.moonP1{
+    background-image: url(PFcolors.png);
+    background-size: contain;
+}
+.moonP2{
+    background-image: url(PFcube.png);
+    background-size: contain;
+}
+/* .moonNE{
+    background-image: url(PFmars.png);
+    background-size: contain;
+} */
+.moonP3{
+    background-image: url(PFblackhole.png);
+    background-size: contain;
+}
+.moonP5{
+    background-image: url(PFpackman.png);
+    background-size: contain;
+}
+.moonP4{
+    background-image: url(PFring.png);
+    background-size: contain;
+}
+/* .moonSE{
+    background-image: url(PFrobot.png);
+    background-size: contain;
+} */
+/* .moonSS{
+    background-image: url(PFtarget.png);
+    background-size: contain;
+} */
+img:not(.A-img>img):not(.B-img>img){
+    max-width: 2.75vh;
+    max-height: 2.75vh;
+    position: absolute;
+}
+  
+.text{
+    box-sizing: border-box;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    width: 96vw;
+    height: 55vh; 
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    background-color: rgb(39, 52, 34);
+    color: lime;
+    padding: 4px;
+    padding-top: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: auto;
+}
+.centertext{
+    box-sizing: border-box;
+    width: calc(53vw - 20px);
+}
+
+.botom{
+    display: flex;
+}
+.game{
+    box-sizing: border-box;
+    width: 30vw;
+    height: 35vh; 
+    display: flex;
+    justify-content: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+.controler{
+    box-sizing: border-box;
+    width: 30vw;
+    height: 35vh;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 2vw;
+}
+.buttons{
+    box-sizing: border-box;
+    width: 30vw;
+    height: 35vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 2vw;
+}
+
+.arow{
+    /* border: 3px rgb(29, 177, 34) solid; */
+    box-sizing: border-box;
+    width: 30vh;
+    height: 30vh;
+    margin-top: 2.5vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.up{
+    background-color: yellow;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    rotate: 270deg;
+}
+.left{
+    background-color: yellow;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    rotate: 180deg;
+}
+.right{
+    background-color: yellow;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.down{
+    background-color: yellow;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    rotate: 90deg;
+}
+.center{
+    background-image: url(giphy.gif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    /* outline: 10px yellow solid; */
+    border-radius: 4px;
+    outline: 10px lightblue solid;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.ScrollUp, .ScrollLeft, .ScrollRight, .ScrollDown{
+    width: 100%;
+    height: 100%;
+}
+.ScrollUp:hover, .ScrollLeft:hover, .ScrollRight:hover, .ScrollDown:hover{
+    background-image: url(Orange_animated_right_arrow.gif);
+    background-size: cover;
+}
+.ScrollUp:active, .ScrollLeft:active, .ScrollRight:active, .ScrollDown:active{
+    filter: hue-rotate(-180deg);
+}
+
+#box{
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    width: 30vh;
+    height: 30vh;
+    margin-top: 2.5vh;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+.threbox{
+    width: 100%;
+    height: 100%;
+}
+#box > div{
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.A_B_button{
+    width: 30vh;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 2.5vh;
+    position: relative;
+}
+
+.RedButtA, .RedButtB{
+    background-color: red;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 100px;
+    box-sizing: border-box;    
+}
+
+.A-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.A-img>img{
+    max-width: 65%;
+    max-height: 100%;
+}
+
+.B-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.B-img>img{
+    width: 100%;
+    height: 80%;
+}
+
+.BottomThree{
+    display: flex;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-bottom: 0px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    box-sizing: border-box;
+    width: 60vw;
+    margin-left: 20vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+.BottomThree>div{
+    border: black 1px solid;
+    box-sizing: border-box;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 96, 96);
+}
+.BottomThree>div:hover{
+    background-color: rgb(106, 106, 106);
+}
+
+.IceLand{
+    background-image: url(BOcube.png);
+    background-size: cover;
+}
+.IceLand>div{background-image: none;}
+
+.ColorLand{
+    background-image: url(BOcolor.png);
+    background-size: cover;
+}
+.ColorLand>div{background-image: none;}
+
+.SunLand{
+    background-image: url(BOhole.png);
+    background-size: cover;
+}
+.SunLand>div{background-image: none;}
+
+.PacLand{
+    background-image: url(BOwaka.png);
+    background-size: cover;
+}
+.PacLand>div{background-image: none;}
+
+.RingLand{
+    background-image: url(BOring.png);
+    background-size: cover;
+}
+.RingLand>div{background-image: none;}
+
+.SStar{
+     width: 28px;
+     height: 28px;
+     position: absolute;
+     background-image: url(MSstar.png);
+     background-size: cover;
+     z-index: 3;
+     pointer-events: none;
+}
+
+.trail:hover{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    background-image: url(MSstar.png);
+    background-size: cover;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.A-img>p{
+    font-size: 10vh;
+    pointer-events: none;
+}
+.B-img>p{
+    font-size: 10vh;
+    pointer-events: none;
+}
+
+.trail { 
+    position: absolute;
+    height: 10px; width: 10px;
+    border-radius: 3px;
+    /* background: teal; */
+    pointer-events: none;
+    background-image: url(MSstar.png);
+    background-position: right;
+    background-size: contain;
+    z-index: 3;
+}
+
+/* .scrollbox{
+    border: red 1px solid;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    position: relative;
+} */
+
+#image{
+    margin-top: -3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: red 1px solid; */
+    box-sizing: border-box;
+    width: 40%;
+    height: 55vh;
+    position: absolute;
+    margin-left: 55vw;
+}
+.part1{
+    outline: 10px solid gray;
+    box-sizing: border-box;
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(77, 77, 77);
+    
+}
+.part2{
+    width: 100%;
+    height: 45vh;
+    outline: 10px solid gray;
+    border: 3px rgb(29, 177, 34) solid;
+    border-radius: 1px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.downbox {
+    animation: downmove .5s linear;
+}
+.upbox {
+    animation: upmove .5s linear;
+}
+  
+@keyframes downmove {
+    from {top: -60vh;}
+    50% {top: -30vh !important;} /* ignored */
+    to {top: 0vh;}
+}
+@keyframes upmove{
+    from {top: 0vh;}
+    50% {top: -37vh !important;} /* ignored */
+    to {top: -75vh;}
+}
+  
+.carousel-inner{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: calc(40vw - 5px);
+    height: calc(45vh - 4px);
+
+  }
+  
+  
+  #one-box{
+    background-image: url(BOcolor.png);
+    width: calc(40vw - 5px);
+    height: calc(45vh - 4px);
+    background-size: contain;
+    background-repeat: round;
+    background-position: top;
+    position: absolute;
+    margin-left: calc(-40vw + 5px);
+  }
+  
+  #two-box{
+    background-image: url(BOcube.png);
+    width: calc(40vw - 5px);
+    height: calc(45vh - 4px);
+    background-size: contain;
+    background-repeat: round;
+    background-position: top;
+    position: absolute;
+    margin-left: 0vw;
+    
+  }
+    
+  .one--move {
+    animation: one--move .5s linear;
+  }
+  
+  @keyframes one--move{
+    from {left: 0vw;}
+    50% {left: 20vw !important;}
+    to {left: calc(40vw);}
+  }
+  
+  .two--move {
+    animation: two--move .5s linear;
+  }
+  
+  @keyframes two--move{
+    from {left: 0vw;}
+    50% {left: 20vw !important;}
+    to {left: calc(40vw);}
+  }
+  
